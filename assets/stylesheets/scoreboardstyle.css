@@ -1,0 +1,354 @@
+body {
+  /** /
+  background-color: #f2f2f2;
+  background-repeat: no-repeat;
+ 
+  background-attachment: fixed !important;
+  overflow:hidden;
+
+  height:100% !important;
+  width:100% !important;
+  position:fixed !important;
+
+  /*font-weight: bold !important;*/
+  /*font-family: 'Roboto Condensed', sans-serif !important;*/
+  /*font-size: 14px !important;*/
+  /**/
+
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  font-family: 'Roboto', sans-serif !important;
+  font-size: 14px !important;
+}
+
+div.enclose {
+  overflow: scroll;
+  left: 0;
+  top: 0;
+  width: inherit;
+  height: inherit;
+}
+
+div.square {
+  box-shadow: 0px 2px 12px #666666;
+  background-color: #242424;
+  position: fixed;
+  width: 640px;
+  height: calc(100vh - 236px); /*top: 116 + bottom 120 */
+  max-height: calc(100vh - 236px + 24px); /*top: 116 + bottom 120 + 24 (animation-menu) */
+  min-height: 200px;
+
+  left:50%;
+  /*
+  // This centered vertically
+  top:50%;
+  margin:-320px 0 0 -320px;
+  */
+  top:100px;
+  margin:0 0 0 -320px;
+  margin-bottom: 100px !important;
+}
+
+.locationicon {
+	position: relative;
+    top: -7px;
+    margin-right: -8px;
+    margin-left: 12px;
+    height: 16px;
+}
+
+.rider {
+
+  height: 50px;
+  margin-bottom: 10px;
+  display: flex;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.rider .index {
+
+  background-color: rgb(77, 77, 77);
+  width: 50px;
+  margin-right: 10px;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 50px;
+  box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.3);
+}
+
+.rider .text {
+
+  background-color: rgb(77, 77, 77);
+  flex-grow: 1;
+  display: inline-block;
+  box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.3);
+}
+
+.rider .text .name {
+  float: left;
+  padding-left: 5px;
+  vertical-align: middle;
+  line-height: 50px; 
+  white-space: nowrap;
+  max-width: calc(520px - 116px);
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.score {
+  
+  text-align: right;
+}
+
+.rider .text .score {
+
+  float: right;
+  padding-right: 10px;
+  vertical-align: middle;
+  line-height: 50px; 
+}
+
+.firstranked .index {
+
+  background-color: #00abff;
+  color: white !important;
+}
+
+.firstranked .text {
+
+  background-color: #00abff;
+  color: white !important;
+}
+
+.rider .text .pic {
+
+  float: left;
+  width: 40px;
+  height: 40px;
+  overflow: hidden;
+}
+
+.leaderboard {
+
+  margin-right: 20px;
+  margin-left: 20px;
+  padding-bottom: 100px;
+}
+
+.pic {
+
+  border-radius: 50%;
+  margin: 5px;
+}
+
+.metricDropdown {
+    position: relative;
+    top: -8px;
+    left: 72px;
+    cursor: pointer;
+}
+
+/* Date picker styles */
+
+div.range_inputs {
+
+  visibility: hidden;
+  width: 0px;
+  height: 0px;
+}
+
+div.ranges li {
+
+  background: white !important;
+  color: black !important;
+  border: 0px !important;
+}
+
+div.ranges li:hover, div.ranges li.active {
+
+  color: #00abff !important;
+}
+
+/* Boostrap selector styles */
+.btn {
+
+  color: #c0c0c0 !important;
+  padding-bottom: 5px !important;
+}
+
+.btn-default, .btn-group, .btn-group-vertical {
+
+  vertical-align: bottom !important;
+  width: auto !important;
+  background-color: transparent !important;
+  border-width: 0px !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+}
+
+.bootstrap-select .dropdown-toggle:focus {
+
+  outline: none !important;
+}
+
+.dropdown-menu>.active>a, .dropdown-menu>.active>a:focus, .dropdown-menu>.active>a:hover {
+
+   background-color: #00abff !important;
+}
+
+*:focus {
+
+  outline: none !important;
+}
+
+li.selected > a:focus {
+
+  background-color: #00abff !important;
+  color: white !important;
+}
+
+.form-control, .form-control:focus {
+
+  border-color: #c0c0c0 !important;  
+}
+
+.form-control:focus {
+
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+button.dropdown-toggle {
+
+  color: black !important;
+}
+
+button.dropdown-toggle[title=CONTINENT], button.dropdown-toggle[title=COUNTRY], button.dropdown-toggle[title=SPOT] {
+
+  color: #c0c0c0 !important;
+}
+
+/* ADDED OVERWRITE */
+.tabs {
+	position: absolute;
+	z-index: 9;
+	margin-left: 20px;
+	margin-top: -20px;	
+	width:100%;	
+	
+	display: none;
+}
+.tabList {
+	text-transform: uppercase;
+	text-shadow: 0px 1px 2px rgba(0,0,0,0.25);
+	font-family: 'Roboto', sans-serif !important;
+	font-size:11px;
+	letter-spacing:3px;
+	color:#FFF;
+	padding:0;
+	margin:0;
+}
+	.tabList a, .tabList a:hover {
+		color:#FFF;
+		text-decoration: none!important;
+	}
+
+	.tabList li {
+		list-style: none;
+		display: inline-block;
+		margin-right:30px;
+		margin-bottom:8px;
+		opacity: 0.25;
+		filter: alpha(opacity=25);	
+		cursor: pointer;
+	}
+
+	.tabList li.selectedTab, .tabList li:hover {
+		opacity: 0.95;
+		filter: alpha(opacity=95);				
+	}
+
+		.tabs .tab_create {
+			margin-right:37px;
+
+			float:right;
+		}
+	
+div.square {
+	top:116px;
+	
+	/*with new menu open*/
+	/*top:140px;*/
+}
+
+.background-image {
+  background-image: url("../images/scoreboard.png");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  filter: blur(8px); 
+  -webkit-filter: blur(8px);
+  /**/
+  height: 2000px;
+  width: 2000px;
+  /**/
+}
+#full-size {
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+  position: fixed
+}
+
+.menu{
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url(background.jpg);
+  background-size: cover;
+  background-position: center;
+
+}
+.navbar{
+  width: 85;
+  margin: auto;
+  padding: 35px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo{
+ width: 150 ;
+  cursor: pointer;
+}
+.navbar ul li{
+  list-style: none;
+  display: inline-block;
+  margin: 0 20px;
+  position: relative;
+}
+.navbar ul li a{
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+}
+.navbar ul li::after{
+  content: '';
+  height: 3px;
+  width: 0;
+  background: #00a3a3;
+  position: absolute;
+  left: 0px;
+  bottom: -10px;
+  transition: 0.5s;
+}
+.navbar ul li:hover::after{
+  width: 100%;
+}

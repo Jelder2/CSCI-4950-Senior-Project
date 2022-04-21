@@ -1,4 +1,6 @@
 <?php 
+//Simple logout function that sends user back to homepage
+//Called in 
 
 session_start();
 

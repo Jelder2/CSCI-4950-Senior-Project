@@ -1,16 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Login</title>
-</head>
-<link rel="stylesheet" href="styler.css">
-<body>
-
-    <!-- Header Section -->
-
-
-    <!-- Menu Navigation Bar -->
-    <div class="menu">
+<div class="menu">
         <div class="navbar">
             <img src="logo.png" class="logo">
             <ul>
@@ -23,41 +11,31 @@
 
        </div>
 
-
     <!-- Body section -->
-		
        <!--SIGNUP FORM-->
     <div class="login-page">
       <div class="form">
         <form action="connect.php" method="post" class="register-form" >
-          <input type="text" placeholder="Username" id="namee"  name="namee"/> <!---->
-          <input type="text" placeholder="Password" id="passwordd" name="passwordd"/> <!--placeholder="username"-->
-          <input type="text" placeholder="Email" id="email"   name="email"/>
-		  <input type="text" placeholder="6 Digit Pin" id="pin"   name="pin"/>
+          <input type="text" placeholder="Username" id="Namee"  name="Namee"/> <!---->
+          <input type="text" placeholder="Password" id="Passwordd" name="Passwordd"/> <!--placeholder="username"-->
+          <input type="text" placeholder="Email" id="Email"   name="Email"/> <!--placeholder="username"-->
           <button type="submit" name="submit">Create</button>
           <p class="message">Already Registered? <a href="#">Login</a></p>
         </form>
-		  
         <!--LOGIN FORM-->
         <form action="loginForum.php" method="post" class="login-form">
-          <input type="text" placeholder="username" id="nameLogin"  name="nameLogin"/>
-          <input type="text" placeholder="password" id="passLogin"  name="passLogin"/>
-          <button>Login</button>
+          <input type="text" placeholder="username"/>
+          <input type="text" placeholder="password"/>
+          <button>login</button>
           <p class="message">Not Registered? <a href="#">Register</a></p>
         </form>
       </div>
     </div>
-		
     <!--Script to show/hide the login/signup-->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
 
     <script>
       $('.message a').click(function(){
         $('form').animate({height: "toggle", opacity: "toggle"}, "slow");
       });
     </script>
-
-    <!-- Footer Section -->
-	</div>
-</body>
-</html> 

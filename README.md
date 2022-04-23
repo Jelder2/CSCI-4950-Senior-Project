@@ -1,13 +1,19 @@
 # CSCI-4950-Senior-Project
 
 ## Quick-Start Guide
-Required Software - Python, mySQL Database ????
+Required Software - Python, mySQL Workbench ????
 
 ### To install Python:
-1. navigate to: https://www.python.org/downloads/
+1. Navigate to: https://www.python.org/downloads/
 2. Download the latest version of python
 3. Run the executable downloaded and install python
 4. Ensure Python is installed on the PATH as it will be needed to start the webserver 
+
+### To install MySQL Workbench:
+1. Navigate to: https://dev.mysql.com/downloads/workbench/
+2. Download the MySQL Version appropriate for your machine
+3. Run the Program downloaded
+4. Run MySQL Workbench and go through the setup
 
 ### To start a local webserver:
 

@@ -1,9 +1,18 @@
 <?php
-    require 'scoreboardinteract.php'
-?>
-<!DOCTYPE HTML>
-<html lang="en">
+    include 'scoreboardinteract.php';
+    session_start(); 
 
+    $host_name = 'db5006574384.hosting-data.io';
+    $database = 'dbs5453727';
+    $user_name = 'dbu1706119';
+    $password = 'Redwagon12!';
+
+    $connect = mysqli_connect($host_name, $user_name, $password, $database);
+    $sql = "SELECT User, email, pin FROM thegame";
+    $result = $connect->query($sql);
+?>
+
+<html>
 <head>
     <meta charset="UTF-8">
     <title>scoreboard</title>
@@ -174,156 +183,6 @@
                     <div class="text">
                     <div class="name"><?php echo getName(25, 1);?></div>
                     <div class="score"><?php echo getScore(25, 1)?></div>
-                    </div>
-                </div>
-                <div class="rider"><div class="index">26</div>
-                    <div class="text">
-                    <div class="name"><?php echo getName(26, 1);?></div>
-                    <div class="score"><?php echo getScore(26, 1)?></div>
-                    </div>
-                </div>
-                <div class="rider"><div class="index">27</div>
-                    <div class="text">
-                    <div class="name"><?php echo getName(27, 1);?></div>
-                    <div class="score"><?php echo getScore(27, 1)?></div>
-                    </div>
-                </div>
-                <div class="rider"><div class="index">28</div>
-                    <div class="text">
-                    <div class="name"><?php echo getName(28, 1);?></div>
-                    <div class="score"><?php echo getScore(28, 1)?></div>
-                    </div>
-                </div>
-                <div class="rider"><div class="index">29</div>
-                    <div class="text">
-                    <div class="name"><?php echo getName(29, 1);?></div>
-                    <div class="score"><?php echo getScore(29, 1)?></div>
-                    </div>
-                </div>
-                <div class="rider"><div class="index">30</div>
-                    <div class="text">
-                    <div class="name"><?php echo getName(30, 1);?></div>
-                    <div class="score"><?php echo getScore(30, 1)?></div>
-                    </div>
-                </div>
-                <div class="rider"><div class="index">31</div>
-                    <div class="text">
-                    <div class="name"><?php echo getName(31, 1);?></div>
-                    <div class="score"><?php echo getScore(31, 1)?></div>
-                    </div>
-                </div>
-                <div class="rider"><div class="index">32</div>
-                    <div class="text">
-                    <div class="name"><?php echo getName(32, 1);?></div>
-                    <div class="score"><?php echo getScore(32, 1)?></div>
-                    </div>
-                </div>
-                <div class="rider"><div class="index">33</div>
-                    <div class="text">
-                    <div class="name"><?php echo getName(33, 1);?></div>
-                    <div class="score"><?php echo getScore(33, 1)?></div>
-                    </div>
-                </div>
-                <div class="rider"><div class="index">34</div>
-                    <div class="text">
-                    <div class="name"><?php echo getName(34, 1);?></div>
-                    <div class="score"><?php echo getScore(34, 1)?></div>
-                    </div>
-                </div>
-                <div class="rider"><div class="index">35</div>
-                    <div class="text">
-                    <div class="name"><?php echo getName(35, 1);?></div>
-                    <div class="score"><?php echo getScore(35, 1)?></div>
-                    </div>
-                </div>
-                <div class="rider"><div class="index">36</div>
-                    <div class="text">
-                    <div class="name"><?php echo getName(36, 1);?></div>
-                    <div class="score"><?php echo getScore(36, 1)?></div>
-                    </div>
-                </div>
-                <div class="rider"><div class="index">37</div>
-                    <div class="text">
-                    <div class="name"><?php echo getName(37, 1);?></div>
-                    <div class="score"><?php echo getScore(37, 1)?></div>
-                    </div>
-                </div>
-                <div class="rider"><div class="index">38</div>
-                    <div class="text">
-                    <div class="name"><?php echo getName(38, 1);?></div>
-                    <div class="score"><?php echo getScore(38, 1)?></div>
-                    </div>
-                </div>
-                <div class="rider"><div class="index">39</div>
-                    <div class="text">
-                    <div class="name"><?php echo getName(39, 1);?></div>
-                    <div class="score"><?php echo getScore(39, 1)?></div>
-                    </div>
-                </div>
-                <div class="rider"><div class="index">40</div>
-                    <div class="text">
-                    <div class="name"><?php echo getName(40, 1);?></div>
-                    <div class="score"><?php echo getScore(40, 1)?></div>
-                    </div>
-                </div>
-                <div class="rider"><div class="index">41</div>
-                    <div class="text">
-                    <div class="name"><?php echo getName(41, 1);?></div>
-                    <div class="score"><?php echo getScore(41, 1)?></div>
-                    </div>
-                </div>
-                <div class="rider"><div class="index">42</div>
-                    <div class="text">
-                    <div class="name"><?php echo getName(42, 1);?></div>
-                    <div class="score"><?php echo getScore(42, 1)?></div>
-                    </div>
-                </div>
-                <div class="rider"><div class="index">43</div>
-                    <div class="text">
-                    <div class="name"><?php echo getName(43, 1);?></div>
-                    <div class="score"><?php echo getScore(43, 1)?></div>
-                    </div>
-                </div>
-                <div class="rider"><div class="index">44</div>
-                    <div class="text">
-                    <div class="name"><?php echo getName(44, 1);?></div>
-                    <div class="score"><?php echo getScore(44, 1)?></div>
-                    </div>
-                </div>
-                <div class="rider"><div class="index">45</div>
-                    <div class="text">
-                    <div class="name"><?php echo getName(45, 1);?></div>
-                    <div class="score"><?php echo getScore(45, 1)?></div>
-                    </div>
-                </div>
-                <div class="rider"><div class="index">46</div>
-                    <div class="text">
-                    <div class="name"><?php echo getName(46, 1);?></div>
-                    <div class="score"><?php echo getScore(46, 1)?></div>
-                    </div>
-                </div>
-                <div class="rider"><div class="index">47</div>
-                    <div class="text">
-                    <div class="name"><?php echo getName(47, 1);?></div>
-                    <div class="score"><?php echo getScore(47, 1)?></div>
-                    </div>
-                </div>
-                <div class="rider"><div class="index">48</div>
-                    <div class="text">
-                    <div class="name"><?php echo getName(48, 1);?></div>
-                    <div class="score"><?php echo getScore(48, 1)?></div>
-                    </div>
-                </div>
-                <div class="rider"><div class="index">49</div>
-                    <div class="text">
-                    <div class="name"><?php echo getName(49, 1);?></div>
-                    <div class="score"><?php echo getScore(49, 1)?></div>
-                    </div>
-                </div>
-                <div class="rider"><div class="index">50</div>
-                    <div class="text">
-                    <div class="name"><?php echo getName(50, 1);?></div>
-                    <div class="score"><?php echo getScore(50, 1)?></div>
                     </div>
                 </div>
             </div>

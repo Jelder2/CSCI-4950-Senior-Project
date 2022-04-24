@@ -1,13 +1,14 @@
 <?php
     include 'connect.php'
 
-    function getName(int $High, int $Low) {
-        $select = mysql_query("SELECT 'USER' FROM 'thegame' ORDER BY 'playerScore' DESC LIMIT $Low, $High");
+    function getName(int $num, int $Offset) {
+        $select = mysql_query("SELECT 'USER' FROM 'thegame' ORDER BY 'playerScore' DESC LIMIT $num, $Offset");
         return $select;
     }
 
-    function getScore(int $High, int $Low) {
-        $select = mysql_query("SELECT 'playerScore' FROM 'thegame' ORDER BY 'playerScore' DESC LIMIT $Low, $High");
+    function getScore(int $num, int $Offset) {
+        $select = mysql_query("SELECT 'playerScore' FROM 'thegame' ORDER BY 'playerScore' DESC LIMIT $num, $Offset");
         return $select;
     }
+
 ?>

@@ -1,27 +1,17 @@
 <?php
     function OpenCon(){
-    	$dbhost = "localhost";
-        $dbuser = "root";
-        $dbpass = "";
-        $db = "thegame2";
+    	$dbhost = 'db5006574384.hosting-data.io';
+        $dbuser = 'dbu1706119';
+        $dbpass = 'Redwagon12!';
+        $db = 'dbs5453727';
 
-	    $conn = new mysqli($dbhost, $dbuser, $dbpass, $db) or die("Connect Failure". $conn -> error);
+	$conn = new mysqli($dbhost, $dbuser, $dbpass, $db) or die("Connect Failure". $conn -> error);
 
-	    return $conn;
+	return $conn;
     }
 
     function CloseCon($conn){
     	$conn->close();
-    }
-
-    function getNameArr(){
-        $data = array();
-        $conn = OpenCon();
-        $sql = "SELECT USER, playerScore FROM thegame ORDER BY playerScore DESC LIMIT 50;";
-        $result = $conn->query($sql);
-        while($row = $result->fetch_assoc()){
-            printf("%s (%s)\n", $row["USER"], $row["playerScore"]);
-        }
     }
     
     function getName(int $num, int $Offset) {
@@ -39,5 +29,4 @@
         $result = $select->fetch_array()[0] ?? '';
         return $result;
     }
-    //getNameArr();
 ?>

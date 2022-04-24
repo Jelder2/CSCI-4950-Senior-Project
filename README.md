@@ -18,7 +18,7 @@ Required Software: XAMPP
 5. Move the folder into htdocs, this will be part of the url (NOTE: If you want a shorter name for easier navigation, change 'CSCI-4950-Senior-Project' to something else)
 6. Once that is done you should be able to open up a web browser and navigate to localhost/CSCI-4950-Senior-Project/index.html (or whatever you named the folder) to view the pages
 IMPORTANT NOTE: Some files may not function properly due to the database connections not being the same. If that is the case, the information will have to change to match your database information. These files include, but are not limited to: scoreboardinteract.php, connect.php, admin.php
-
+IMPORTANT NOTE 2: The scoreboard will not function properly until there are values that can be pulled from the database.
 
 
 ## HTML Files
@@ -35,25 +35,19 @@ scoreboard.html - The scoreboard page displays the top 50 users and their scores
 admin.html - The admin login page. This gives access to administrative controls, including access to the website backend and ability to remove users.
 
 ## PHP Files
-PlayerKilled.php - 
+PlayerKilled.php - removes players from the game once they have been eliminated
 
-SortingPlayers.php - 
+SortingPlayers.php - handles adding users to the game and performs random shuffling of users, allowing the selecting of targets. 
 
-access.php - 
+connect.php -  connects to the database and inputs variables into the database
 
-connect.php - 
-
-login.php - 
-
-loginForum.php - 
+loginForum.php - Validates the email and password login for users.
 
 logout.php - handles user logout request and returns them to the main page index.html
 
 scoreboard.php - the main page for the scoreboard. It mainly is html with php used to interact with the database to properly to maintain a live score evertime the page is refreshed
 
 scoreboardinteract.php - holds functions that are necessary for accessing user's usernames and user's scores.
-
-thegame.php - 
 
 ## <br>
 ## CSS Files (assets/stylesheets)

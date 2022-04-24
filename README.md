@@ -1,30 +1,24 @@
 # CSCI-4950-Senior-Project
 
 ## Quick-Start Guide
-Required Software - Python, mySQL Workbench ????
+Required Software: XAMPP
 
-### To install Python:
-1. Navigate to: https://www.python.org/downloads/
-2. Download the latest version of python
-3. Run the executable downloaded and install python
-4. Ensure Python is installed on the PATH as it will be needed to start the webserver 
+## To install XAMPP:
+1. Navigate to: https://www.apachefriends.org/index.html
+2. Download the latest XAMPP version appropriate for your operating system
+3. Run the program downloaded
+4. Once XAMPP is installed ensure the web server and the database server are running, if they are not start them
+5. It will be possible to tell if they have started if you navigate to localhost in a web broswer and are greeted by the XAMPP Dashboard and you can create databases in the phpmyadmin dashboard
 
-### To install MySQL Workbench:
-1. Navigate to: https://dev.mysql.com/downloads/workbench/
-2. Download the MySQL Version appropriate for your machine
-3. Run the Program downloaded
-4. Run MySQL Workbench and go through the setup
+## To run the files locally (After XAMPP is installed):
+1. Download or pull the files from this GitHub repository
+2. Navigate to where you chose for the XAMPP Files to be installed (Windows Default is <Drive>:\xampp\)
+3. Navigate to the htdocs folder
+4. If you downloaded the files from this GitHub please unzip them now, If you pulled them skip this step
+5. Move the folder into htdocs, this will be part of the url (NOTE: If you want a shorter name for easier navigation, change 'CSCI-4950-Senior-Project' to something else)
+6. Once that is done you should be able to open up a web browser and navigate to localhost/CSCI-4950-Senior-Project/index.html (or whatever you named the folder) to view the pages
+IMPORTANT NOTE: Some files may not function properly due to the database connections not being the same. If that is the case, the information will have to change to match your database information. These files include, but are not limited to: scoreboardinteract.php, connect.php, admin.php
 
-### To start a local webserver:
-
-1. Open a command prompt or terminal Window
-2. Type python3 -m http.server 8000
-3. a local webserver should be open on localhost, port 8000
-
-### To start a local database:
-1. ???
-2. ???
-3. Profit
 
 
 ## HTML Files

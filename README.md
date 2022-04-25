@@ -45,6 +45,8 @@ scoreboardinteract.php - holds functions that are necessary for accessing user's
 
 adminBehind.php - handles the creation and administration of the admin page. Hidden behind game.html
 
+thegame.php - handles whether the user is logged in or not.
+
 ## <br>
 ## CSS Files (assets/stylesheets)
 

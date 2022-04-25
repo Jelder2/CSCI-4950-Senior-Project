@@ -28,18 +28,12 @@ login.html - This page is where users can signin to their account or new users c
 
 rules.html - Exactly as it sounds, this page lays out the rules of the game being played. Like the other pages it features a navigation bar to get to the other pages
 
-game.html - Gives a brief overview of the game
-
-scoreboard.html - The scoreboard page displays the top 50 users and their scores
-
 admin.html - The admin login page. This gives access to administrative controls, including access to the website backend and ability to remove users.
 
 ## PHP Files
-PlayerKilled.php - removes players from the game once they have been eliminated
+SortingPlayers.php - Once the admin starts the game by pushing the button on adminBehind.php, the code will run putting all players from the database into an array and then shuffling the order. The players are then put into a new sql table `playerList` 
 
-SortingPlayers.php - handles adding users to the game and performs random shuffling of users, allowing the selecting of targets. 
-
-connect.php -  connects to the database and inputs variables into the database
+connect.php -  connects to the database and inputs the sign up variables into the database
 
 loginForum.php - Validates the email and password login for users.
 

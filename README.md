@@ -12,7 +12,7 @@ Required Software: XAMPP
 
 ## To run the files locally (After XAMPP is installed):
 1. Download or pull the files from this GitHub repository
-2. Navigate to where you chose for the XAMPP Files to be installed (Windows Default is <Drive>:\xampp\)
+2. Navigate to where you chose for the XAMPP Files to be installed (Windows Default is C(Or whatever drive):\xampp\)
 3. Navigate to the htdocs folder
 4. If you downloaded the files from this GitHub please unzip them now, If you pulled them skip this step
 5. Move the folder into htdocs, this will be part of the url (NOTE: If you want a shorter name for easier navigation, change 'CSCI-4950-Senior-Project' to something else)
@@ -42,6 +42,8 @@ logout.php - handles user logout request and returns them to the main page index
 scoreboard.php - the main page for the scoreboard. It mainly is html with php used to interact with the database to properly to maintain a live score evertime the page is refreshed
 
 scoreboardinteract.php - holds functions that are necessary for accessing user's usernames and user's scores.
+
+adminBehind.php - handles the creation and administration of the admin page. Hidden behind game.html
 
 ## <br>
 ## CSS Files (assets/stylesheets)

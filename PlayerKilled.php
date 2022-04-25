@@ -4,7 +4,7 @@ include 'SortingPlayers.php';
 //This function will search through the array datas and find the player who is to be eliminated and delete them from the array
 
 //Will need to go back and change this later when I figure out how to pull the targets Id 
-$playersId = boobies;
+$playersId = new;
 
 function playerDied(){
 	$arrayPlayersId = array_search($playersId, $datas);

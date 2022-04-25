@@ -2,15 +2,11 @@
 //This file will be ran one time once the game begins to take all players from the database and randomly shuffle the array around.
 
 
-//I need to iniciate the database connection but for now Im just going to right some stuff
 
-//Some variables might need to be changed to match the connection 
-//Pulling the counter numbers from the database "thegame" into the array datas inorder to be used for the function
-//function sortPlayers(){
 
 
 	
-	//login info, will at some point make a seperate file for database connect 
+	
 	
 	 $host_name = 'db5006574384.hosting-data.io';
 	  $database = 'dbs5453727';

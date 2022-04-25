@@ -2,9 +2,17 @@
 
 session_start(); 
 
-include "connect.php";
+$host_name = 'db5006574384.hosting-data.io';
+  $database = 'dbs5453727';
+  $user_name = 'dbu1706119';
+  $password = 'Redwagon12!';
 
-if (isset($_POST['uname']) && isset($_POST['password'])) {
+  $connect = mysqli_connect($host_name, $user_name, $password, $database);
+//include "connect.php";
+
+
+
+if (isset($_POST['nameLogin']) && isset($_POST['passLogin'])) {
 
     function validate($data){
 
@@ -18,17 +26,17 @@ if (isset($_POST['uname']) && isset($_POST['password'])) {
 
     }
 
-    $email = validate($_POST['email']);
+    $email = validate($_POST['nameLogin']);
 
-    $passwordd = validate($_POST['passwordd']);
+    $passwordd = validate($_POST['passLogin']);
 
-    if (empty($uname)) {
+    if (empty($email)) {
 
         header("Location: login.html?error=Email is required");
 
         exit();
 
-    }else if(empty($pass)){
+    }else if(empty($passwordd)){
 
         header("Location: login.html?error=Password is required");
 
@@ -38,8 +46,11 @@ if (isset($_POST['uname']) && isset($_POST['password'])) {
 
         $sql = "SELECT * FROM `thegame` WHERE email='$email' AND pass='$passwordd'";
 
+        
+
         $result = mysqli_query($connect, $sql);
 
+        
         if (mysqli_num_rows($result) === 1) {
 
             $row = mysqli_fetch_assoc($result);
@@ -54,12 +65,12 @@ if (isset($_POST['uname']) && isset($_POST['password'])) {
 
                 $_SESSION['count'] = $row['count'];
 
-                header("Location: game.html");
+                header("Location: thegame.php");
 
                 exit();
 
             }else{
-
+                
                 header("Location: login.html?error=Incorect User name or password");
 
                 exit();
@@ -68,7 +79,7 @@ if (isset($_POST['uname']) && isset($_POST['password'])) {
 
         }else{
 
-            header("Location: login.html?error=Incorect User name or password");
+            header("Location: login.html?error=Incorect User name or password2");
 
             exit();
 
@@ -78,7 +89,7 @@ if (isset($_POST['uname']) && isset($_POST['password'])) {
 
 }else{
 
-    header("Location: login.html");
+    header("Location: index.html");
 
     exit();
 

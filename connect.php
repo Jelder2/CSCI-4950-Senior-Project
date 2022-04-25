@@ -33,7 +33,7 @@ $pin = $_POST['pin'];
 	 
 	mysqli_close($connect);
 	  
-	 //header(index.html); 
+  header("Location: login.html"); 
 	  
 
   }
